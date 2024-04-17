@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="nav">
+        <img style="width: 140px; height: 150px; display: inline;" src="./images/jgLogo.svg" alt="Logo">
+        <div class="InternalNav">
+            <div class="dropdown" style="margin-left: 5px; margin-right: 5px;">
+                <button class="btn btn-secondary dropdown-toggle customBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">About Us</a>
+                  <a class="dropdown-item" href="#">Our Approach</a>
+                  <a class="dropdown-item" href="#">Subjects and Courses</a>
+                  <a class="dropdown-item" href="#">Contact Us</a>
+
+                </div>
+            </div>
+            <div class="dropdown" style="margin-left: 5px; margin-right: 5px;">
+                <button class="btn btn-secondary dropdown-toggle customBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Academic
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Homework Help</a>
+                  <a class="dropdown-item" href="#">Exam Preparation</a>
+                  <a class="dropdown-item" href="#">Learning Resources</a>
+                  <a class="dropdown-item" href="#">Feedback</a>
+
+                </div>
+            </div>
+            <div class="dropdown" style="margin-left: 5px; margin-right: 5px;">
+                <button class="btn btn-secondary dropdown-toggle customBtn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Career Counseling
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Career Assessment and Exploration</a>
+                  <a class="dropdown-item" href="#">Skill Development</a>
+                  <a class="dropdown-item" href="#">Resume/CV Writing and Cover Letters</a>
+                </div>
+            </div>
+            <div class="nav" style="justify-content: flex-end; width: 100%; display: block; ">
+                <button style="height: 40px; border: none !important; color: #172541 !important;" type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#joinNow">Join Now!</button>
+            <button style="height: 40px; border: none !important; color: #172541 !important;" type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#becomeTutor">Become a Tutor!</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="joinNow">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Join Now</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">First and last name</span>
+                        </div>
+                        <input type="text" aria-label="First name" class="form-control">
+                        <input type="text" aria-label="Last name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                  </form> 
+                </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Register</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" role="dialog" id="becomeTutor">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Become a Tutor</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">First and last name</span>
+                        </div>
+                        <input type="text" aria-label="First name" class="form-control">
+                        <input type="text" aria-label="Last name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <label for="inputGroupFileAddon01">Upload CV</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                        </div>
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                      </div>
+                    
+                  </form> 
+                </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="bg">
+        <div class="bgFlexText" >
+            <p class="bgText">
+                Tutoring You Can Depend On!
+            </p>
+            <p style="color: aliceblue; font-size: 23px;">
+                Traditional or online tutoring with subject matter experts
+            </p>
+            <div class="nav">
+                <button style="height: 40px; background-color: #172541 !important; border-radius: 60px !important; border: none !important; color:aliceblue !important; margin-right: 5px;" type="button" class="btn btn-outline-info">How We Work</button>
+                <button style="height: 40px; background-color:aliceblue !important; color:aliceblue !important; border-radius: 60px !important; border: none !important; color:#172541 !important;" type="button" class="btn btn-outline-info">Get Started!</button>
+
+
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
