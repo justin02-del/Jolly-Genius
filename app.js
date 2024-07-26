@@ -1,17 +1,22 @@
+//this is server
+
 const express=require('express')
 const app=express()
 const userController = require("./controllers/usersController")
 //const userRouter = require("./routes/user-auth")
 const connectDB = require('./dbconfig/db');
+const cors = require('cors');
 
 const port=4000
 connectDB();
+
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use("/sign-up", userController.registerUser);
-app.use("/login", userController.loginUser);
+app.post('/sign-up', userController.registerUser); // Changed to app.post
+app.post('/login', userController.loginUser); // Changed to app.post
 
 
 

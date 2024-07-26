@@ -1,5 +1,9 @@
+//the controller, interacts with database
+
 const User = require('../models/users');
 const bcrypt = require('bcrypt');
+const nodemailer = require('nodemailer');
+
 
 const registerUser = async (req, res) => {
   try {
@@ -87,5 +91,44 @@ const loginUser = async (req, res) => {
     });
   }
 };
+
+//send email
+
+const sendEmail= async (req,res) =>{
+  try{
+    // Create a transporter object
+    const transporter = nodemailer.createTransport({
+      service: 'gmail', // Use Gmail as the email service
+      auth: {
+        user: 'jollygeniuslearning@gmail.com', // Your Gmail email address
+        pass: 'JollyGenius02' // Your Gmail password
+      }
+    });
+
+    // Define the email options
+    const mailOptions = {
+      from: 'jollygeniuslearning@gmail.com', // Sender's email address
+      to: 'justinernest02@gmail.com', // Recipient's email address
+      subject: 'Hello from Nodemailer', // Subject line
+      text: 'This is a test email sent using Nodemailer!' // Plain text body
+    };
+
+    // Send the email
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Email sent: ' + info.response);
+      }
+    });
+  }catch (error) {
+    res.status(500).json({
+      message: "Something went wrong",
+      error: error.message,
+    });
+  }
+
+}
+
 
 module.exports = {registerUser, loginUser};

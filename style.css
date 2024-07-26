@@ -1,3 +1,4 @@
+/* Base Styles */
 .nav{
     display: flex;
 }
@@ -5,8 +6,6 @@
     display: flex;
     flex-direction: row;
     margin-top: 40px;
-    /* margin-left: 5px;
-    margin-right: 5px; */
 }
 .bg{
     background-image: url(./images/background.jpg);
@@ -15,10 +14,9 @@
     background-size: cover;
     background-position: center top bottom;
     background-repeat: no-repeat;
-    /* padding: 800px; */
-    margin: 0; 
-     padding: 0;
-     position: relative;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 .bgText{
     color: #172541;
@@ -29,7 +27,8 @@
 .bgFlexText{
     display: flex;
     position: absolute;
-    margin-top: 125px; margin-left: 106px;
+    margin-top: 125px;
+    margin-left: 106px;
     width: 515px;
     flex-direction: column;
 }
@@ -38,4 +37,74 @@
     font-family: 'Times New Roman' !important;
     border: none !important;
     color: #172541 !important;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .InternalNav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bg {
+        height: 100vh;
+    }
+    .bgText {
+        font-size: 45px;
+    }
+    .bgFlexText {
+        margin-top: 100px;
+        margin-left: 50px;
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .InternalNav {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+    .bgText {
+        font-size: 35px;
+    }
+    .bgFlexText {
+        margin-top: 75px;
+        margin-left: 25px;
+        width: 300px;
+    }
+    .customBtn {
+        font-size: 14px;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .InternalNav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .bgText {
+        font-size: 25px;
+    }
+    .bgFlexText {
+        margin-top: 50px;
+        margin-left: 15px;
+        width: 200px;
+    }
+    .customBtn {
+        font-size: 12px;
+    }
+    .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .alert {
+        font-size: 12px;
+    }
 }

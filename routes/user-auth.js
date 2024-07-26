@@ -1,3 +1,5 @@
+//this is the routes. takes info processed by contoller
+
 const express = require("express");
 const router = express.Router();
 const userController = require("../controllers/usersController"); // importing the user controller 
