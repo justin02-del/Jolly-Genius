@@ -3,13 +3,14 @@ body {
     line-height: 1.6;
     margin: 20px;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url('/images/contactUSBG.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .container {
     max-width: 800px;
     margin: auto;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
