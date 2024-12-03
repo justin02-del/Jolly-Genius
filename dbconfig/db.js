@@ -1,7 +1,7 @@
 // config/db.js
+require('dotenv').config();
 const mongoose = require('mongoose');
-const mongourl = "mongodb://localhost:27017/JollyGenius";
-
+const mongourl = process.env.MONGO_CONNECTION_STRING
 const connectDB = async () => {
   try {
     await mongoose.connect(mongourl);
